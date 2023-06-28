@@ -15,9 +15,10 @@ void print_rev(char *s)
 		i++;
 	}
 
-	while (i--)
+	for (int c; i >= 0; c++)
 	{
 		_putchar(s[i]);
+		i--;
 	}
 	_putchar('\0');
 }
