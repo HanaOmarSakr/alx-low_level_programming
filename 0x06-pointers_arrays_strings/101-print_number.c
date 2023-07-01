@@ -5,16 +5,17 @@
  */
 void print_number(int n)
 {
-	int digit;
-	int neg = 0;
 	int divisor = 1;
+	int digit;
+	int negative = 0;
 
 	if (n < 0)
 	{
 		_putchar('-');
 		n = -n;
-		neg = 1;
+		negative = 1;
 	}
+
 	while (n / divisor >= 10)
 	{
 		divisor *= 10;
@@ -26,7 +27,8 @@ void print_number(int n)
 		n -= digit * divisor;
 		divisor /= 10;
 	}
-	if (neg)
+
+	if (negative)
 	{
 		_putchar('-');
 	}
