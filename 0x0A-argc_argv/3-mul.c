@@ -9,14 +9,17 @@
 
 int main(int argc, char **argv)
 {
-	int i;
+	int a, b, result;
 
 	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	prinf("%i\n", argv[1] * argv[2]);
+	a = atoi(argv[1]);
+	b = atoi(argv[2]);
+	result = a * b;
+	prinf("%i\n", result);
 	return (0);
 }
 
