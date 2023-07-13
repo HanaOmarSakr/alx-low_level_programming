@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdlib.h>
 /**
  * create_array - creates
@@ -15,7 +14,7 @@ char *create_array(unsigned int size, char c)
 
 	if (size == 0 || n == 0)
 	{
-		return (0);
+		return (NULL);
 	}
 	while (size--)
 		n[size] = c;
