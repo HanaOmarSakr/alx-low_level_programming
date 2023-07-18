@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include <stdlib.h>
-
 /**
  * str_concat - adds two strings
  * @s1: input
@@ -12,7 +10,6 @@ char *str_concat(char *s1, char *s2)
 {
 	int len1 = 0;
 	int len2 = 0;
-	int i = 0;
 	char *str;
 
 	if (s1 == NULL)
@@ -34,13 +31,18 @@ char *str_concat(char *s1, char *s2)
 	if  (str == NULL)
 		return (NULL);
 
-	for (i = 0; i < len1; i++)
+	len1 = len2 = 0;
+	while (s1[i] != '\0')
 	{
-		str[i] = s1[i];
+		str[len1] = s1[len1];
+		len1++;
 	}
-	for (i = 0; i < len2; i++)
-		str[len1 + i] = s2[i];
-	str[t] = '\0';
+	while (s2[len2] != '\0')
+		str[len1] = s2[len2];
+		len1++;
+		len2++;
+
+	str[len1] = '\0';
 	return (str);
 }
 
