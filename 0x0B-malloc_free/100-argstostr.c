@@ -1,5 +1,12 @@
 #include <stdlib.h>
 
+/**
+ * argstostr - function
+ * @ac: input
+ * @av: input
+ * Return: pointer
+ */
+
 char *argstostr(int ac, char **av)
 {
 	int i, j, k, len;
