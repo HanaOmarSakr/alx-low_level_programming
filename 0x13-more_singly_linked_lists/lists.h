@@ -1,3 +1,6 @@
+#ifndef LISTS_H /* check if LISTS_H is defined */
+#define LISTS_H /* define LISTS_H */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
