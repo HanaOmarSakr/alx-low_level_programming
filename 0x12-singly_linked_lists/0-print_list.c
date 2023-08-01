@@ -1,21 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
-/**
- * _strlen - prints all the elements of a list_t list
- * @s: pointer to the head of the list
- * Return: the number of nodes
- */
 
-int _strlen(char *s)
-{
-	int i = 0;
-
-	if (!s)
-		return (0);
-	while (*s++)
-		i++;
-	return (i);
-}
 /**
  * print_list - prints all the elements of a list_t list
  * @h: pointer to the head of the list
@@ -24,13 +9,21 @@ int _strlen(char *s)
 
 size_t print_list(const list_t *h)
 {
-	size_t c = 0;
+	unsigned int c = 0;
+	list_t *ptr = h;
 
-	while (h)
+	while (ptr->next != NULL)
 	{
-		printf("[%d] %s\n", _strlen(h->str), h->str ? h->str : "(nil)");
-		h = h->next;
+		if (ptr->str == NULL)
+		{
+			printf("[0] (nil)\n");
+		}
+		else
+		{
+			printf("[%d] %s\n", ptr->len, ptr->str);
+		}
 		c++;
+		ptr = ptr->next;
 	}
 	return (c);
 }
