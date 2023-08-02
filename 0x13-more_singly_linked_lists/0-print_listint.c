@@ -9,7 +9,7 @@
 size_t print_listint(const listint_t *h)
 {
 /* stores no. of nodes */
-size_t no_nodes = 0;
+size_t number = 0;
 /* traverse through all the elements of list */
 while (h != NULL)
 {
@@ -17,7 +17,7 @@ while (h != NULL)
 printf("%d\n", h->n);
 /* move to the next pointer */
 h = h->next;
-no_nodes++;
+number++;
 }
-return (no_nodes);
+return (n);
 }
