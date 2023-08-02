@@ -22,4 +22,6 @@ void print_dog(struct dog *d);
 #include <stdio.h>
 #include <string.h>
 
+typedef struct dog dog_t;
+
 #endif
