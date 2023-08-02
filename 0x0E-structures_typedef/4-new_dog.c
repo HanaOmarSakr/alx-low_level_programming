@@ -23,7 +23,7 @@ int _strlen(const char *s)
  * Return: ..
  */
 
-char _strcopy(char *d, char *s)
+char *_strcopy(char *d, char *s)
 {
 	int i;
 
