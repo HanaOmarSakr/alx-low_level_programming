@@ -9,12 +9,14 @@
 
 int main(int argc __attribute__((unused)), char *argv[])
 {
+	int sum;
 
 	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	printf("%d", atoi(argv[1]) * atoi(argv[2]));
+	sum = atoi(argv[1]) * atoi(argv[2]);
+	printf("%d", sum);
 	return (0);
 }
