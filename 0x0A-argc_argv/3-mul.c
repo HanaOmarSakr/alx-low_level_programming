@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+#include <stdlib.h>
 /**
  * main - ..
  * @argc: ...
@@ -16,6 +16,6 @@ int main(int argc __attribute__((unused)), char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	printf("%d", argv[1] * argv[2]);
+	printf("%d", atoi(argv[1]) * atoi( argv[2]));
 	return (0);
 }
