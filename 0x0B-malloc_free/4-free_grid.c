@@ -4,7 +4,7 @@
 
 /**
  * free_grid - ...
- * @gid: ..
+ * @grid: ..
  * @height: ..
  * Return: ..
  */
