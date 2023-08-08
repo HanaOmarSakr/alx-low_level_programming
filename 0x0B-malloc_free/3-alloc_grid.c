@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * alloc_grid - ...
+ * @height: ...
+ * @width: ...
+ * Return: ...
+ */
+
 int **alloc_grid(int width, int height)
 {
 	int i;
@@ -21,7 +28,12 @@ int **alloc_grid(int width, int height)
 	{
 		new[i] = malloc(width * sizeof(int));
 		if (new[i] == NULL)
+		{
+			for (int j = 0; j < i; j++)
+				free(new[i]);
+			free(new);
 			return (NULL);
+		}
 
 		for (j = 0; j < width; j++)
 			new[i][j] = 0;
