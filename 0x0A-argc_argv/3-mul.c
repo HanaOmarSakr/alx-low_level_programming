@@ -9,13 +9,13 @@
 
 int main(int argc __attribute__((unused)), char *argv[])
 {
-        (void)argv;
+	(void)argv;
 
 	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	printf("%d", atoi(argv[1]) * atoi( argv[2]));
+	printf("%d", atoi(argv[1]) * atoi(argv[2]));
 	return (0);
 }
