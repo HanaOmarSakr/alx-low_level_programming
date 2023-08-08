@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 
 	int i;
 	int sum = 0;
-	long temp;
+	int temp;
 	char *endptr;
 
 	if (argc == 1)
