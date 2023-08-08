@@ -17,6 +17,6 @@ int main(int argc __attribute__((unused)), char *argv[])
 		return (1);
 	}
 	sum = atoi(argv[1]) * atoi(argv[2]);
-	printf("%d", sum);
+	printf("%d\n", sum);
 	return (0);
 }
