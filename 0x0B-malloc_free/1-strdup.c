@@ -5,11 +5,12 @@
 /**
  * _strdup - ...
  * @str: ...
+ * Return: ..
  */
 
 char *_strdup(char *str)
 {
-	int i = 0;
+	int i = 1;
 	int j;
 	char *new;
 
@@ -20,7 +21,6 @@ char *_strdup(char *str)
 	{
 		i++;
 	}
-
 	new = malloc(sizeof(char) * i);
 
 	if (new == NULL)
@@ -32,6 +32,7 @@ char *_strdup(char *str)
 	{
 		new[j] = str[j];
 	}
+	new[j] = '\0';
 	return (new);
 }
 
