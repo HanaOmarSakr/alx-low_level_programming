@@ -9,7 +9,6 @@
 
 int main(int argc __attribute__((unused)), char *argv[])
 {
-	(void)argv;
 
 	if (argc != 3)
 	{
