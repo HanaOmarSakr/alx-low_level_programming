@@ -13,8 +13,9 @@ int main(int argc, char *argv[])
 	(void)argv;
 
 	int i;
-	int sum;
-	int temp;
+	int sum = 0;
+	long temp;
+	char *endptr;
 
 	if (argc == 1)
 	{
@@ -22,14 +23,16 @@ int main(int argc, char *argv[])
 		return (2);
 	}
 
-	for (i = 0; i < argc - 1; i++)
+	for (i = 1; i < argc; i++)
 	{
-		temp = atoi(argv[i]);
-		if (temp == 0)
+		temp = strtol(argv[i], &endptr, 10);
+		if (*endptr != '\0')
 		{
 			printf("Error\n");
 			return (1);
 		}
 		sum = sum + temp;
 	}
+	printf("%d\n", sum);
+	return (0);
 }
