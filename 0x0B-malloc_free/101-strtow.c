@@ -7,7 +7,7 @@ char **strtow(char *str)
 	char *word = NULL;
 
 	if (str == NULL || str[0] == '\0')
-		return NULL;
+		return (NULL);
 	while (str[len] != '\0')
 	{
 		if (str[len] != ' ')
@@ -15,16 +15,13 @@ char **strtow(char *str)
 			if (!in_word)
 			{
 				words++;
-				in_word = 1;
-			}
-		}
+				in_word = 1; }}
 		else
 			in_word = 0;
-		len++;
-	}
+		len++; }
 	array = malloc((words + 1) * sizeof(char *));
 	if (array == NULL)
-		return NULL;
+		return (NULL);
 	for (i = 0; i < len; i++)
 	{
 		if (str[i] != ' ')
@@ -32,8 +29,7 @@ char **strtow(char *str)
 			if (!in_word)
 			{
 				start = i;
-				in_word = 1;	}
-		}
+				in_word = 1; }}
 		else
 		{
 			if (in_word)
@@ -46,18 +42,13 @@ char **strtow(char *str)
 					for (j = 0; j < index; j++)
 						free(array[j]);
 					free(array);
-					return (NULL); 
-				}
+					return (NULL); }
 				for (j = 0; j < word_len; j++)
 					word[j] = str[start + j];
-
 				word[word_len] = '\0';
 				array[index] = word;
 				index++;
-				in_word = 0;
-			}
-		}
-	}
+				in_word = 0; }}}
 	if (in_word)
 	{
 		end = len - 1;
@@ -68,15 +59,12 @@ char **strtow(char *str)
 			for (j = 0; j < index; j++)
 				free(array[j]);
 			free(array);
-			return NULL; 
-		}
+			return (NULL); }
 		for (j = 0; j < word_len; j++)
 			word[j] = str[start + j];
 		word[word_len] = '\0';
 		array[index] = word;
-		index++;
-	}
+		index++; }
 	array[index] = NULL;
-	return array;
-}
+	return (array); }
 
