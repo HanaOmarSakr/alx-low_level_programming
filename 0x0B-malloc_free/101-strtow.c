@@ -44,7 +44,7 @@ char **strtow(char *str)
 				if (word == NULL)
 				{
 					for (j = 0; j < index; j++)
-						free(array[j];
+						free(array[j]);
 					free(array);
 					return (NULL); 
 				}
