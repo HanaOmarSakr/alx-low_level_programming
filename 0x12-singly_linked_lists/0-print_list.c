@@ -7,14 +7,15 @@
  */
 
 int _strlen(char *s)
-{       
-        int i = 0;
-        if (!s)
-                return (0);
-        while (*s++)
-                i++;
-        return (i);
-}   
+{
+	int i = 0;
+
+	if (!s)
+		return (0);
+	while (*s++)
+		i++;
+	return (i);
+}
 /**
  * print_list - prints all the elements of a list_t list
  * @h: pointer to the head of the list
