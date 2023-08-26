@@ -1,8 +1,8 @@
 #include "lists.h"
 #include <stdio.h>
 
-/*
- * strlen - ...
+/**
+ * _strlen - ...
  * @s: ...
  * Return: ...i
  * Description: ...
@@ -25,7 +25,7 @@ int _strlen(char *s)
  */
 size_t print_list(const list_t *h)
 {
-	size_t i;
+	size_t i = 0;
 
 	while (h)
 	{
