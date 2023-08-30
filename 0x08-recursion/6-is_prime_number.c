@@ -1,4 +1,4 @@
-#include "maain.h"
+#include "main.h"
 int is_prime_helper(int n, int i)
 {
     if (n <= 1)
