@@ -5,7 +5,7 @@
  * @dest: ..
  * @src: ..
  * Return: dest
- */
+ *
 
 char *strdup(char *dest, char *src)
 {
@@ -20,6 +20,8 @@ char *strdup(char *dest, char *src)
 	}
 	return (dest);
 }
+*/
+
 /**
  * init_dog - ...
  * @d: ..
@@ -31,10 +33,10 @@ char *strdup(char *dest, char *src)
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	if (d == NULL || name == NULL || owner == NULL)
-		return;
-
-	strdup(d->name, name);
-	d->age = age;
-	strdup(d->owner, owner);
+	if (d)
+	{
+		d->name = name;
+		d->age = age;
+		d->owner = owner;
+	}
 }
