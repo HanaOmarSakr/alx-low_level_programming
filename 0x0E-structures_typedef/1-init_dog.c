@@ -31,7 +31,7 @@ char *strdup(char *dest, char *src)
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	if (d == NULL || name == NULL || age == NULL || owner == NULL)
+	if (d == NULL || name == NULL || owner == NULL)
 		return;
 
 	strdup(d->name, name);
